@@ -12,13 +12,13 @@ El frontend todavia no se desarrolla, una vez que tengamos el proyecto aunque se
 
 ## Contribuyentes
 
-+ [Facundo Decena](https://github.com/FacundoDecena)
++ [Decena, Facundo](https://github.com/FacundoDecena)
 
-+ [Lautaro Emanuel](https://github.com/emlautarom1)
++ [Emanuel, Lautaro](https://github.com/emlautarom1)
 
-+ [Eugenia Formoso](https://github.com/eugeformoso)
++ [Formoso, Eugenia](https://github.com/eugeformoso)
 
-+ [Megan Maguire](https://github.com/meganmaguire)
++ [Maguire, Megan](https://github.com/meganmaguire)
 
 ## Nota
 
