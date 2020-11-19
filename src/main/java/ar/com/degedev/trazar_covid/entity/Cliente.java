@@ -1,10 +1,12 @@
-package ar.com.degedev.trazar_covid.entities;
+package ar.com.degedev.trazar_covid.entity;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Data
+@Entity
 public class Cliente {
     @Id
     private Integer DNI;

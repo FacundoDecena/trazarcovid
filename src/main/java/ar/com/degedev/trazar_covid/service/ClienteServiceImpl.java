@@ -1,6 +1,6 @@
 package ar.com.degedev.trazar_covid.service;
 
-import ar.com.degedev.trazar_covid.entities.Cliente;
+import ar.com.degedev.trazar_covid.entity.Cliente;
 import ar.com.degedev.trazar_covid.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 

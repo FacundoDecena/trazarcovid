@@ -1,6 +1,6 @@
 package ar.com.degedev.trazar_covid.controller;
 
-import ar.com.degedev.trazar_covid.entities.Cliente;
+import ar.com.degedev.trazar_covid.entity.Cliente;
 import ar.com.degedev.trazar_covid.service.ClienteService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
