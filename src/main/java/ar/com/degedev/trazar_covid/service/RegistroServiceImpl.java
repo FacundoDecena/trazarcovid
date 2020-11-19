@@ -2,11 +2,13 @@ package ar.com.degedev.trazar_covid.service;
 
 import ar.com.degedev.trazar_covid.entity.Registro;
 import ar.com.degedev.trazar_covid.repository.RegistroRepository;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
+@Service
 public class RegistroServiceImpl implements RegistroService {
 
     @Resource
