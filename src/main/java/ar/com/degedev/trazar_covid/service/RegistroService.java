@@ -2,7 +2,7 @@ package ar.com.degedev.trazar_covid.service;
 
 import ar.com.degedev.trazar_covid.entity.Registro;
 
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public interface RegistroService {
@@ -15,6 +15,6 @@ public interface RegistroService {
 
     List<Registro> getRegistrosByComercioId(Integer comercioId);
 
-    List<Registro> getRegistrosBetweenDates(LocalDate desde, LocalDate hasta);
+    List<Registro> getRegistrosBetweenDates(Date desde, Date hasta);
 
 }
