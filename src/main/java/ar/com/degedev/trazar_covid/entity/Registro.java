@@ -4,8 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -19,12 +18,12 @@ public class Registro {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-//    @ManyToOne
-//    @JoinColumn(name = "comercio_id")
-//    private Comercio comercio;
+    @ManyToOne
+    @JoinColumn(name = "comercio_id")
+    private Comercio comercio;
 
-    private LocalDate fecha;
+    private Date fecha;
 
-    private LocalTime horaEntrada;
+//    private LocalTime horaEntrada;
 
 }
