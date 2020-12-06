@@ -15,7 +15,7 @@ public class Comercio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
 
-    private Integer CUIT;
+    private Long CUIT;
     private String nombre;
     private String direccion;
     private String telefono;

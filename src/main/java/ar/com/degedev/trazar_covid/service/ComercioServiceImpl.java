@@ -16,6 +16,7 @@ public class ComercioServiceImpl implements ComercioService {
     @Override
     public List<Comercio> getComercios() {
         return comercioRepository.findAll();
+
     }
 
     @Override

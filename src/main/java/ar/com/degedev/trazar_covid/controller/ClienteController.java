@@ -26,4 +26,9 @@ public class ClienteController {
     public Cliente getClienteByDNI(@PathVariable("dni") Integer clienteDNI) {
         return clienteService.getClienteByDNI(clienteDNI);
     }
+
+    @RequestMapping(path = "/apellido/{apellido}", method = RequestMethod.GET)
+    public List<Cliente> getClienteByApellido(@PathVariable("apellido") String apellido){
+        return clienteService.getClienteByApellido(apellido);
+    }
 }

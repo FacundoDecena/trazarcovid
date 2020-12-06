@@ -12,4 +12,6 @@ public interface ClienteService {
     List<Cliente> getClientes();
 
     Cliente getClienteByDNI(Integer clienteDNI);
+
+    List<Cliente> getClienteByApellido(String apellido);
 }

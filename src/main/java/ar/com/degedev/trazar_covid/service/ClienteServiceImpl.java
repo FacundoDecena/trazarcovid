@@ -27,4 +27,9 @@ public class ClienteServiceImpl implements ClienteService {
     public Cliente getClienteByDNI(Integer clienteDNI) {
         return clienteRepository.findById(clienteDNI).orElse(null);
     }
+
+    @Override
+    public List<Cliente> getClienteByApellido(String apellido){
+        return clienteRepository.findByApellido(apellido);
+    }
 }
