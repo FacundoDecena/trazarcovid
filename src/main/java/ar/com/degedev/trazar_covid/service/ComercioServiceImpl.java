@@ -2,6 +2,7 @@ package ar.com.degedev.trazar_covid.service;
 
 import ar.com.degedev.trazar_covid.entity.Comercio;
 import ar.com.degedev.trazar_covid.repository.ComercioRepository;
+import lombok.val;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -31,7 +32,7 @@ public class ComercioServiceImpl implements ComercioService {
 
     @Override
     public Comercio updateComercio(Integer comercioId, Comercio comercio) {
-        Comercio oldComercio = comercioRepository.findById(comercioId).orElse(null);
+        val oldComercio = comercioRepository.findById(comercioId).orElse(null);
         if (oldComercio == null) {
             return null;
         }

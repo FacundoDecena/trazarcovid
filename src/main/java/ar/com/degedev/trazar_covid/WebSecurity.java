@@ -1,9 +1,8 @@
 package ar.com.degedev.trazar_covid;
 
-import javax.annotation.Resource;
-
 import ar.com.degedev.trazar_covid.filter.JWTAuthenticationFilter;
 import ar.com.degedev.trazar_covid.filter.JWTAuthorizationFilter;
+import lombok.val;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -17,6 +16,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import javax.annotation.Resource;
 
 
 @Configuration
@@ -43,7 +44,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
          * 2. Se activa la configuración CORS con los valores por defecto
          * 3. Se desactiva el filtro CSRF
          * 4. Se indica que el login no requiere autenticación
-         * 5. Se indica que el resto de URLs esten securizadas
+         * 5. Se indica que el resto de URLs estén aseguradas
          */
         httpSecurity
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -64,7 +65,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
-        final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        val source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
         return source;
     }
