@@ -2,12 +2,16 @@ package ar.com.degedev.trazar_covid.controller;
 
 import ar.com.degedev.trazar_covid.entity.Registro;
 import ar.com.degedev.trazar_covid.service.ClienteService;
+import ar.com.degedev.trazar_covid.service.ComercioService;
 import ar.com.degedev.trazar_covid.service.RegistroService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/registro")
@@ -19,10 +23,19 @@ public class RegistroController {
     @Resource
     ClienteService clienteService;
 
+    @Resource
+    ComercioService comercioService;
+
     @RequestMapping(method = RequestMethod.POST)
-    public Registro createRegistro(@RequestBody Registro registro) {
-        clienteService.createCliente(registro.getCliente());
-        return registroService.createRegistro(registro);
+    public ResponseEntity<Registro> createRegistro(@RequestBody Registro registro) {
+        return Optional.ofNullable(comercioService.getComercioById(registro.getComercio().getId()))
+                .map(comercio -> {
+                    clienteService.createCliente(registro.getCliente());
+                    registroService.createRegistro(registro);
+
+                    return new ResponseEntity<>(registro, HttpStatus.CREATED);
+                })
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
