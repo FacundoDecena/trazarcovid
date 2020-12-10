@@ -23,3 +23,13 @@ El frontend todavia no se desarrolla, una vez que tengamos el proyecto aunque se
 ## Nota
 
 Que nos sacamos con el proyecto cuando nos la den
+
+## En la VM
+
+Requiere ejecutar `mvn package` a fin de generar el `.jar`
+
+```
+sudo apt update
+sudo apt install default-jre
+sudo java -jar trazar_covid-0.0.1.jar --server.port=80
+```

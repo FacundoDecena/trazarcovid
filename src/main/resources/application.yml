@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost/trazarcovid?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
-    username: usuario
-    password: contraseña
+    url: jdbc:mysql://34.66.173.4/trazarcovid?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    username: root
+    password: root
 
   mvc:
     format:
