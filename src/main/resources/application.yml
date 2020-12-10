@@ -4,6 +4,10 @@ spring:
     username: usuario
     password: contraseña
 
+  mvc:
+    format:
+      date-time: iso
+
   jpa:
     properties:
       hibernate:

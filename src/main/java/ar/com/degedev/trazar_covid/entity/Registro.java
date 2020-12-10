@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -22,8 +22,5 @@ public class Registro {
     @JoinColumn(name = "comercio_id")
     private Comercio comercio;
 
-    private Date fecha;
-
-//    private LocalTime horaEntrada;
-
+    private LocalDateTime fecha;
 }

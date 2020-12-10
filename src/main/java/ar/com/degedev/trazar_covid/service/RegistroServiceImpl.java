@@ -5,7 +5,7 @@ import ar.com.degedev.trazar_covid.repository.RegistroRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -35,7 +35,7 @@ public class RegistroServiceImpl implements RegistroService {
     }
 
     @Override
-    public List<Registro> getRegistrosBetweenDates(Date desde, Date hasta) {
+    public List<Registro> getRegistrosBetweenDates(LocalDateTime desde, LocalDateTime hasta) {
         return registroRepository.findRegistroByFechaBetween(desde, hasta);
     }
 }
