@@ -25,4 +25,10 @@ public interface RegistroRepository extends JpaRepository<Registro, Integer> {
     @Query("SELECT r FROM Registro r WHERE r.fecha BETWEEN :desde AND :hasta")
     List<Registro> findRegistroByFechaBetween(@Param("desde") LocalDateTime desde, @Param("hasta") LocalDateTime hasta);
 
+    @SuppressWarnings("JpaQlInspection")
+    @Query("SELECT r FROM Registro r WHERE (r.fecha BETWEEN :desde AND :hasta) AND (r.comercio.Id = :comercioId)")
+    List<Registro> findRegistrosByFechaBetweenAndComercioId(@Param("desde") LocalDateTime desde,
+                                                            @Param("hasta") LocalDateTime hasta,
+                                                            @Param("comercioId") Integer comercioId);
+
 }

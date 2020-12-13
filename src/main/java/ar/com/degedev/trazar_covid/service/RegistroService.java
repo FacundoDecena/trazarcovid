@@ -19,4 +19,6 @@ public interface RegistroService {
 
     List<Registro> getRegistrosBetweenDates(LocalDateTime desde, LocalDateTime hasta);
 
+    List<Registro> getRegistrosBetweenDatesAndComercioId(LocalDateTime desde, LocalDateTime hasta, Integer comercioId);
+
 }

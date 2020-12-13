@@ -61,4 +61,13 @@ public class RegistroController {
         return registroService.getRegistrosBetweenDates(desde, hasta);
     }
 
+    @RequestMapping(value = "/fecha/comercio", method = RequestMethod.GET)
+    public List<Registro> getRegistrosBetweenDatesAndComercioId(
+            @RequestParam(name = "desde") LocalDateTime desde,
+            @RequestParam(name = "hasta") LocalDateTime hasta,
+            @RequestParam(name = "id") Integer comercioId
+    ) {
+        return registroService.getRegistrosBetweenDatesAndComercioId(desde, hasta, comercioId);
+    }
+
 }
