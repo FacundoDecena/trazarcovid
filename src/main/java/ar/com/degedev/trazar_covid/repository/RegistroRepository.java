@@ -31,4 +31,9 @@ public interface RegistroRepository extends JpaRepository<Registro, Integer> {
                                                             @Param("hasta") LocalDateTime hasta,
                                                             @Param("comercioId") Integer comercioId);
 
+    @SuppressWarnings("JpaQlInspection")
+    @Query("SELECT r FROM Registro r WHERE (r.fecha BETWEEN :desde AND :hasta) AND (r.cliente.DNI = :clienteDni)")
+    List<Registro> findRegistrosByFechaBetweenAndClienteDni(@Param("desde") LocalDateTime desde,
+                                                            @Param("hasta") LocalDateTime hasta,
+                                                            @Param("clienteDni") Integer clienteDni);
 }

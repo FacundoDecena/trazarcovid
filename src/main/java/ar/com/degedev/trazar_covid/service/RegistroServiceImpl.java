@@ -43,4 +43,9 @@ public class RegistroServiceImpl implements RegistroService {
     public List<Registro> getRegistrosBetweenDatesAndComercioId(LocalDateTime desde, LocalDateTime hasta, Integer comercioId) {
         return registroRepository.findRegistrosByFechaBetweenAndComercioId(desde, hasta, comercioId);
     }
+
+    @Override
+    public List<Registro> getRegistrosBetweenDatesAndClienteDni(LocalDateTime desde, LocalDateTime hasta, Integer clienteDni) {
+        return registroRepository.findRegistrosByFechaBetweenAndClienteDni(desde, hasta, clienteDni);
+    }
 }
