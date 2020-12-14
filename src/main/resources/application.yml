@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mysql://34.66.173.4/trazarcovid?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
     username: root
-    password: root
+    password: milanesa
 
   mvc:
     format:
@@ -11,10 +11,10 @@ spring:
   jpa:
     properties:
       hibernate:
-        show_sql: true
-        format_sql: true
-    hibernate:
-      ddl-auto: update
+        show_sql: false
+        format_sql: false
+#    hibernate:
+#      ddl-auto: update
 
 server:
   error:
